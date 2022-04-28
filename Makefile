@@ -40,8 +40,12 @@ composer: ## Run composer, pass the parameter "c=" to run a given command, examp
 	@$(COMPOSER) $(c)
 
 vendor: ## Install vendors according to the current composer.lock file
-vendor: c=install --prefer-dist --no-dev --no-progress --no-scripts --no-interaction
+vendor: c=install --prefer-dist --no-progress --no-scripts --no-interaction
 vendor: composer
+
+vendor-no-dev: ## Install vendors according to the current composer.lock file
+vendor-no-dev: c=install --prefer-dist --no-dev --no-progress --no-scripts --no-interaction
+vendor-no-dev: composer
 
 ## — Symfony 🎵
 sf: ## List all Symfony commands or pass the parameter "c=" to run a given command, example: make sf c=about
