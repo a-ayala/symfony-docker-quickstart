@@ -12,5 +12,3 @@ Run `make` for a list of commands.
 
 ## Todo
 - Conditionally install / run xdebug though a docker-compose override
-- Pass args
-- serverName
